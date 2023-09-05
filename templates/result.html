@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detection Result</title>
+</head>
+<body>
+    <h1>Emotion Detection Result</h1>
+    <img src="{{ url_for('static', filename='uploaded_image.jpg') }}" alt="Uploaded Image">
+
+    <p>Predicted Emotion: {{ prediction }}</p>
+</body>
+</html>
