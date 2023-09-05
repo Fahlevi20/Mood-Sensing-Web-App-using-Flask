@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from PIL import Image
 import numpy as np
 import tensorflow.keras as keras
+import os
 
 app = Flask(__name__)
 
@@ -35,15 +36,16 @@ def upload_image():
         uploaded_file = request.files['file']
         if uploaded_file:
     # Read the image file
-            img = Image.open(uploaded_file)
-            print("Image opened successfully:", uploaded_file.filename)
+            image_path = os.path.join('static', uploaded_file.filename)
+            uploaded_file.save(image_path)
+            img = Image.open(image_path)
 
             # Make prediction on the uploaded image
             prediction = make_prediction(img)
 
             # Display the predicted class label
             print("Predicted Emotion:", prediction)
-            return render_template('result.html', prediction=prediction, image_path=uploaded_file.filename)
+            return render_template('result.html', prediction=prediction, image_path=image_path)
 
     return render_template("index.html")
 
