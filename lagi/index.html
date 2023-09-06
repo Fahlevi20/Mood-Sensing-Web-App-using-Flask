@@ -12,7 +12,11 @@
     <div class="box">
       <div class="offline">
         <div class="overlap-group">
-          <div class="upload"></div>
+            <form method="POST" enctype="multipart/form-data"></form>
+          <div class="upload">
+            <input type="file" name="file" accept="image/*" />
+              <input type="submit" value="Detect Mood" />
+          </div>
           <div class="text-wrapper">Upload Image Here</div>
         </div>
       </div>

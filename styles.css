@@ -1,4 +1,24 @@
 /* styles.css */
+.label {
+    width: 1127px;
+    height: 95px;
+  }
+  
+  .label .text-wrapper {
+    position: fixed;
+    width: 1127px;
+    top: 0;
+    left: 0;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #b1b2ff;
+    font-size: 64px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
 body {
     font-family: Poppins, sans-serif;
     background-color: #f7f7f7;
